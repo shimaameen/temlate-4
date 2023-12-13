@@ -1,0 +1,315 @@
+:root{
+    --main-color:#a4a0a0;
+}
+*{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+ul{
+list-style: none;
+padding: 0;
+}
+a{
+    text-decoration: none;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* start header */
+  header{
+    background-color: #eee;
+    box-shadow: 0 2px 15px rgba(121, 120, 120);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+  }
+  header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .container h3{
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    display:flex;
+  }
+  header .container ul{
+    display: flex;
+    height: 40px;
+    align-items: center;
+  }
+  header .container li a{
+    color: black;
+    padding: 0 20px;
+    transition: 0.3s;
+  }
+  header .container li a:hover{
+    color: #656464;
+  }
+
+  /* end header */
+  /* start landing */
+  .landing{
+    background-color: black;
+    height: 100%;
+
+  }
+  .landing .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  @media(max-width:797px){
+    .landing .container{
+        flex-direction: column;
+    }
+  }
+  .landing .container .imge{
+    /* top: 50%;
+    position: relative;
+    transform: translatey(50%);
+    order: 2; */
+    order: 2;
+    flex-basis: 30%;
+  }
+  @media(max-width:797px){
+    .landing .container img{
+        display: none;
+    }
+  }
+  .landing .container img{
+    max-width: 100%;
+    /* width: 100%; */
+  }
+  .landing .container .info{
+    color: white;
+    top: 50%;
+    position: relative;
+    /* transform: translatey(50%); */
+  }
+  .landing .container .info span{
+    margin-bottom: 20px;
+    /* padding-bottom: 20px; */
+    display: block;
+  }
+  .landing .container .info h3{
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #a4a0a0;
+  }
+  .landing .container .info p{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .landing .container .info .btn{
+    text-decoration: none;
+    background-color: white;
+    padding: 5px;
+    border-radius: 4px;
+    color: black;
+    transition: 0.3s ease;
+  }
+  .landing .container .info .btn:hover{
+    background-color: var(--main-color);
+    top: 5px;
+    font-size: 17px;
+  }
+  .landing .container ul{
+    display: flex;
+    margin-top: 20px;
+  }
+  .landing .container a{
+    color: white;
+    margin: 5px;
+  }
+  
+
+  /* end landing */
+  /* start servises */
+  .srv{
+ padding-top: 100px;
+ padding-bottom: 100px;
+  }
+  .srv h3{
+    margin-bottom: 50px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .srv .container{
+display: grid;
+grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+gap: 40px;
+  }
+  .srv .container .card{
+    text-align: center;
+    box-shadow: 0 2px 15px rgb(19, 19, 19,20%);
+    padding: 20px;
+    transition: 0.3s ease;
+  }
+  .srv .container .card:hover{
+   /* transform: translateY(-10px); */
+   transform: scale(1.1);
+   background-color: #eee;
+  }
+  .srv .container .card i{
+    font-size: 70px;
+    margin: 10px 0 20px;
+  }
+  .srv .container .card h2{
+
+  }
+  .srv .container .card p{
+    margin: 20px 0 10px;
+    line-height: 1.5;
+  }
+
+  /* end servises */
+  /* start project */
+  .project{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: black;
+  }
+  .project h3{
+    margin-bottom: 50px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+  }
+  .project .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+    gap: 40px;
+  }
+  .project .container .box{
+    border: 2px solid #eee;
+    transition: 0.3s;
+  }
+  .project .container .box:hover{
+   transform: scale(1.1)
+  }
+  .project .container .box img{
+   max-width: 100%;
+   transition: 0.3s;
+  }
+  .project .container .box img:hover{
+    opacity: 0.7;
+  }
+  .project .container .box .info{
+    background-color: white;
+    padding: 20px;
+  }
+  .project .container .box .info h2{
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .project .container .box .info span{
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .project .container .box .info span:hover{
+    color: var(--main-color);
+  }
+  /*end project */
+  /* start togther */
+  .togther{
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .togther h3{
+    margin-bottom: 50px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .togther .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  .togther .container .card{
+      text-align: center;
+      box-shadow: 0 2px 15px rgb(19, 19, 19,20%);
+      padding: 20px;
+      transition: 0.3s ease;
+    }
+    .togther .container .card:hover{
+     transform: scale(1.1);
+     background-color: #eee;
+    }
+  
+  .togther .container .card i{
+    font-size: 50px;
+    margin: 20px 0;
+  }
+  .togther .container .card h2{
+
+  }
+  .togther .container .card p{
+    margin: 20px;
+    color: var(--main-color);
+  }
+  /* end togther */
+  /* start footer */
+  footer{
+    background-color: black;
+    padding: 10px 20px;
+  }
+  footer .feet{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+  footer .feet .text p{
+color: white;
+  }
+  footer .feet .text span{
+    color: var(--main-color);
+  }
+  footer .feet .icon ul{
+    display: flex;
+  }
+  footer .feet .icon ul i{
+    color: white;
+    margin: 0 5px;
+  }
+  /* end footer */
